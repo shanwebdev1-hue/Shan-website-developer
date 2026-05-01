@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Shandigital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <style>
+        .dashboard-container {
+            padding-top: 120px;
+            min-height: 100vh;
+            background-color: var(--bg-primary);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-neon));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        .user-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+
+        .user-info p {
+            color: var(--text-secondary);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .stat-box {
+            background-color: var(--bg-primary);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .stat-box i {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+        }
+
+        .stat-box h4 {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+
+        .stat-box p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Shan<span>digital</span></a>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button id="logoutBtn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <div class="container">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p style="color: var(--text-secondary);">Manage your account and projects.</p>
+                </div>
+                <div id="greeting" style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: var(--accent-blue);">
+                    <!-- Dynamic Greeting -->
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Sidebar / Profile -->
+                <div class="card">
+                    <div class="profile-header">
+                        <div class="avatar" id="userInitials">U</div>
+                        <div class="user-info">
+                            <h3 id="userName">User Name</h3>
+                            <p id="userEmail">user@example.com</p>
+                        </div>
+                    </div>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 24px 0;">
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
+                        <li><a href="#" style="color: var(--accent-blue); display: flex; align-items: center; gap: 12px; font-weight: 500;"><i class="fa-solid fa-user"></i> My Profile</a></li>
+                        <li><a href="#" style="color: var(--text-secondary); display: flex; align-items: center; gap: 12px; transition: color 0.3s;"><i class="fa-solid fa-briefcase"></i> My Projects</a></li>
+                        <li><a href="#" style="color: var(--text-secondary); display: flex; align-items: center; gap: 12px; transition: color 0.3s;"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Main Content -->
+                <div class="card">
+                    <h2>Welcome to your Portal</h2>
+                    <p style="color: var(--text-secondary); margin-top: 8px; margin-bottom: 24px;">Here is an overview of your web development journey.</p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-box">
+                            <i class="fa-solid fa-rocket"></i>
+                            <h4>0</h4>
+                            <p>Active Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <h4>0</h4>
+                            <p>Completed</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fa-solid fa-message"></i>
+                            <h4>0</h4>
+                            <p>Messages</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 32px; padding: 24px; background-color: rgba(0, 102, 255, 0.05); border-radius: var(--border-radius); border: 1px dashed var(--accent-blue);">
+                        <h4 style="color: var(--accent-blue); margin-bottom: 8px;">No active projects</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">You don't have any ongoing web development projects at the moment. Ready to start something new?</p>
+                        <a href="index.html#contact" class="btn btn-primary" style="margin-top: 16px; padding: 10px 20px; font-size: 0.9rem;">Start a Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Check Authentication on load
+        const sessionData = localStorage.getItem('session');
+        if (!sessionData) {
+            // Not logged in
+            window.location.href = 'login.html';
+        } else {
+            const session = JSON.parse(sessionData);
+            if (session.expires < Date.now()) {
+                // Session expired
+                localStorage.removeItem('session');
+                window.location.href = 'login.html';
+            } else {
+                // Populate Dashboard Data
+                document.getElementById('userName').textContent = session.name;
+                document.getElementById('userEmail').textContent = session.email;
+                
+                // Profile Picture handling (Google Image vs Local Initial)
+                const avatarDiv = document.getElementById('userInitials');
+                if (session.picture) {
+                    avatarDiv.innerHTML = `<img src="${session.picture}" alt="Profile" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-blue);">`;
+                    avatarDiv.style.background = 'none'; // Remove gradient if using image
+                } else {
+                    avatarDiv.textContent = session.name.charAt(0).toUpperCase();
+                }
+                
+                const hour = new Date().getHours();
+                let greeting = 'Good Evening';
+                if (hour < 12) greeting = 'Good Morning';
+                else if (hour < 18) greeting = 'Good Afternoon';
+                
+                document.getElementById('greeting').textContent = `${greeting}, ${session.name.split(' ')[0]}!`;
+            }
+        }
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('session');
+            window.location.href = 'login.html';
+        });
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+            updateThemeIcon(targetTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'light') {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shandigital | Professional Web Developer</title>
+    <meta name="description" content="I create fast, responsive, modern websites for your business. Shandigital - Freelance Web Developer.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Shan<span>digital</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html" class="highlight" style="font-weight: 600;">Login</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+            <li><a href="login.html" class="mobile-link highlight">Login</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content fade-in">
+                <div class="badge">Freelance Web Developer</div>
+                <h1>Professional <span class="highlight">Website Developer</span> for Your Business</h1>
+                <p>I create fast, responsive, modern websites that convert visitors into loyal clients.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Your Website</a>
+                    <a href="https://wa.me/9149074092" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp
+                    </a>
+                </div>
+                <div class="hero-contact-info">
+                    <i class="fa-solid fa-phone"></i> +91 9149074092
+                </div>
+            </div>
+            <div class="hero-3d fade-in fade-delay-1">
+                <!-- Spline 3D Embed (Using an iframe as requested) -->
+                <div class="spline-wrapper">
+                    <spline-viewer url="https://prod.spline.design/h0taop07eaRszKjA/scene.splinecode"></spline-viewer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>About <span class="highlight">Shandigital</span></h2>
+                <p>Specialized exclusively in high-end web development.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>I am a passionate freelance web developer dedicated to building high-performing, beautiful, and scalable websites for businesses. With a strong focus on clean code and modern aesthetics, I ensure your digital presence is not only visually stunning but also optimized for growth.</p>
+                    <p>My toolkit consists of the most effective and modern web technologies to deliver exceptional user experiences.</p>
+                </div>
+                
+                <div class="skills-container fade-in fade-delay-1">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-html5 skill-icon" style="color: #E34F26;"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-brands fa-css3-alt skill-icon" style="color: #1572B6;"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-brands fa-js skill-icon" style="color: #F7DF1E;"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-robot skill-icon" style="color: #00E676;"></i>
+                        <span>AI Tools</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-cube skill-icon" style="color: #FF4081;"></i>
+                        <span>Spline 3D</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>My <span class="highlight">Services</span></h2>
+                <p>Focused on one core expertise to deliver the highest quality.</p>
+            </div>
+            
+            <div class="service-single-card fade-in">
+                <div class="service-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Website Development</h3>
+                <p>From concept to deployment, I build websites tailored to your specific goals.</p>
+                
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> E-commerce Websites</li>
+                    <li><i class="fa-solid fa-check"></i> Portfolio Websites</li>
+                    <li><i class="fa-solid fa-check"></i> Clinic Websites</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Recent <span class="highlight">Projects</span></h2>
+                <p>A selection of my best web development work.</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card fade-in">
+                    <div class="mockup-container">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="E-commerce Website Project" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>E-commerce Store</h4>
+                        <p>A fully responsive e-commerce platform built with modern web technologies.</p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-card fade-in fade-delay-1">
+                    <div class="mockup-container">
+                        <img src="https://images.unsplash.com/photo-1481481600463-6810d860451d?q=80&w=800&auto=format&fit=crop" alt="Portfolio Website Project" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Creative Portfolio</h4>
+                        <p>A minimalist portfolio designed to showcase creative work.</p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-card fade-in fade-delay-2">
+                    <div class="mockup-container">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Medical Clinic Project" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Medical Clinic Website</h4>
+                        <p>A professional medical clinic website optimized for patient booking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-choose-me section-padding" id="why-choose">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Why Choose <span class="highlight">Me</span></h2>
+                <p>What sets Shandigital apart from the rest.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>I respect your deadlines and deliver high-quality work promptly without compromising on quality.</p>
+                </div>
+                <div class="feature-card fade-in fade-delay-1">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Clean Code</h4>
+                    <p>My websites are built with semantic, maintainable, and optimized code for better performance.</p>
+                </div>
+                <div class="feature-card fade-in fade-delay-2">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h4>Mobile Friendly</h4>
+                    <p>Every website is guaranteed to look and function perfectly across all devices and screen sizes.</p>
+                </div>
+                <div class="feature-card fade-in fade-delay-3">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>Client Support</h4>
+                    <p>I provide continuous support and clear communication throughout the entire development process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info-panel fade-in">
+                <h2>Let's build your <br><span class="highlight">dream website.</span></h2>
+                <p>Ready to get started? Send a message or reach out directly on WhatsApp for the fastest response.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span>Phone</span>
+                            <p>+91 9149074092</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            <span>Website</span>
+                            <p>www.shandigital.io</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/9149074092" class="btn btn-whatsapp mt-4" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Message on WhatsApp
+                </a>
+            </div>
+            
+            <div class="contact-form-panel fade-in fade-delay-1">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">Shan<span>digital</span></div>
+            <p>&copy; <span id="year"></span> Shandigital. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://wa.me/9149074092" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

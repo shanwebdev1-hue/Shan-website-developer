@@ -213,7 +213,15 @@
                 // Populate Dashboard Data
                 document.getElementById('userName').textContent = session.name;
                 document.getElementById('userEmail').textContent = session.email;
-                document.getElementById('userInitials').textContent = session.name.charAt(0).toUpperCase();
+                
+                // Profile Picture handling (Google Image vs Local Initial)
+                const avatarDiv = document.getElementById('userInitials');
+                if (session.picture) {
+                    avatarDiv.innerHTML = `<img src="${session.picture}" alt="Profile" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-blue);">`;
+                    avatarDiv.style.background = 'none'; // Remove gradient if using image
+                } else {
+                    avatarDiv.textContent = session.name.charAt(0).toUpperCase();
+                }
                 
                 const hour = new Date().getHours();
                 let greeting = 'Good Evening';
